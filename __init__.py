@@ -145,7 +145,7 @@ class DictHandler(http.server.SimpleHTTPRequestHandler):
 
 
 # MAIN
-"""
+
 from aqt import mw
 
 _config.set(mw.addonManager.getConfig(__name__))
@@ -153,7 +153,7 @@ httpd = http.server.ThreadingHTTPServer(("localhost", _config.port), DictHandler
 server_thread = threading.Thread(target=httpd.serve_forever)
 server_thread.daemon = True
 server_thread.start()
-"""
-print("Running in debug mode...")
-httpd = socketserver.TCPServer(("localhost", 8771), DictHandler)
-httpd.serve_forever()
+
+#print("Running in debug mode...")
+#httpd = socketserver.TCPServer(("localhost", 8771), DictHandler)
+#httpd.serve_forever()
